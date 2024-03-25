@@ -1,0 +1,315 @@
+@font-face {
+    font-family: Oswald;
+        src: url(../fonts/Oswald-VariableFont_wght.ttf);
+    }
+    *{
+        font-family: 'Roboto', sans-serif;
+    }
+    h1,h2,h3,h4,h5{
+        font-family: Oswald;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* body*/
+    body{
+        margin: 0;
+    }
+    .uni-padding{
+        padding: 0 7%;
+    }
+    /* topbar */
+    #topbar{
+        background-color: #8e8e8e;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        overflow: auto;
+    }
+    #tollfree{
+        float: left;
+        color: whitesmoke;
+        margin: 0;
+        margin-top: 7px;
+    }
+    #socialicon{
+        float: right;
+    }
+    .fa-brands{
+        background-color: whitesmoke;
+        color: rgb(142, 142, 142);
+        padding: 7px;
+        border-radius: 50%;
+    }
+    /* nav-bar */
+    #nav-bar{
+        background-color: #e54444;
+    }
+    #nav-bar ul li {
+        display: inline-block;
+        padding: 20px 0;
+        padding-right: 35px;
+    }
+    #nav-bar ul li a{
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    #nav-bar ul{
+        padding: 10px;
+        margin: 0;
+    }
+    /* poster */
+    #poster{
+        background-image: url(../image/cyberbully-featimg.png);
+        width: 100vw;
+        height: 80vh;
+        background-position: center;
+        background-size: cover;
+        color: black;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #poster h1{
+        font-size: 50px;
+        position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+   #submit{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+   #submit h2{
+    padding-right: 30px;
+   }
+   #submit form action{
+    border-radius: 15%;
+   }
+  
+    /* why us section */
+    #why-us{
+        overflow: auto;
+    }
+    .read-heading{
+        color:#e54444;
+        text-align: center;
+        font-size: 50px;
+    }
+    .sec33 h3{
+        color:#e54444;
+        font-size: 25px;
+        
+    }
+    .sec33 p{
+        color: #213521b7;
+        margin-bottom: 50px;
+        margin-left: 15px;
+    }
+    .sec33{
+        text-align: center;
+        width: 33.3%;
+        float: left;
+    }
+    /* contact us */
+    #contact{
+        background-color:#e54444 ;
+        color: whitesmoke;
+        overflow: auto;
+        padding-top: 30px ;
+        padding-bottom: 30px;
+    }
+    .sec70{
+        width: 70%;
+        float: left;
+    }
+    .sec30{
+        width: 30%;
+        float: left;
+        text-align: center;
+        padding-top: 50px;
+    }
+    #contactbtn{
+        background-color: whitesmoke;
+        color: #e54444;
+        text-decoration: none;
+       padding: 15px 50px;
+       border-radius: 8px;
+       font-size: 20px;
+       font-weight: bold;
+
+    }
+    /* blog */
+    #why-us{
+        padding-bottom: 50px;
+    }
+    #blog p{
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    #readmore{
+        color:#e54444 ;
+        text-decoration: none;
+        font-family: Oswald;
+        font-weight: bold;
+    }
+    /* subscribe */
+    #subscribe{
+        background-color: #e54444;
+        color: whitesmoke;
+        overflow: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }   
+    .sec50{
+        width: 50%;
+        float:left;
+    }
+    #submit{
+        padding-top: 30px;
+    }
+    #submit input[type="text"]{
+       padding: 10px;
+       font-size: 15px;
+       color: #e54444;
+       margin-right: 20px;
+       border: 0px;
+       width: 45%;
+    }
+    #submit input[type="submit"]{
+        
+        color: #e54444;
+        padding: 7px 15px;
+        font-size: 15px;
+        border: 0px;
+    }
+    #subscribe h2{
+        font-size: 30px;
+    }
+    /* footer */
+    #imp-link{
+        background-color: #515160;
+        color: whitesmoke;
+        overflow: auto;
+        padding:0;
+    }
+    #imp-link .imp p{
+        margin: 0;
+    }
+    .imp{
+        width:33.3%;
+        float: left;
+        padding: 25px 50px;
+        box-sizing: border-box;
+    }
+    .imp h3{
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-thickness: 3px;
+    }
+    #footer-menu li a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    #footer-menu{
+        list-style-type: none;
+        
+    }
+    #footer-menu li{
+        padding: 3px 0;
+    }
+    #copyright{
+        background-color: rgb(30, 30, 40);
+        padding: 15px;
+        color: #cbcbcb;
+    }
+    #copyright p{
+        margin: 0;
+        text-align: center;
+    }
+    #imp-id{
+        padding-left: 30px;
+    }
+    #nav-bar ul #cross,#mobilebar{
+        display: none;
+    }
+    /* responcive i-pad */
+    @media only screen and (max-width: 820px){
+        #nav-bar ul li {
+    padding-right: 21px;
+    }
+    .sec70{
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+    #blog img{
+       width: 200px;
+    }
+    
+}
+/* responcive i-pad */
+@media only screen and (max-width: 500px){
+    #poster h1 {
+        font-size: 40px;
+    }
+    .sec70,.sec30,.sec33,.sec50,.imp{
+        width: 100%;
+    }
+    .sec70{
+            padding-right: 0;
+            text-align: center;
+    }
+    .sec33 a{
+        display: inline-block;
+        margin-bottom: 20px ;
+    }
+    #subscribe h2 {
+        text-align: center;
+        margin: 0;
+    }
+    .imp{
+        padding: 15px 25px;
+        text-align: center;
+    }
+    #footer-menu{
+        padding: 0;
+    }
+    /* mobile menu */
+    #nav-bar{
+        position: absolute;
+        top:0px;
+        height:100vh;
+        width: 250px;
+        padding: 0;
+        left: -250px;
+        transition: all 0.5s ease;
+    }
+    #nav-bar ul li{
+        display: block;
+        padding: 18px 0;
+        border-bottom: 1px solid rgb(199, 184, 184);
+        
+    }
+    #cross{
+        text-align: right;
+    }
+    .fa-regular{
+        font-size: 25px;
+    }
+    #mobilebar{
+        background-color: #e54444;
+        color: whitesmoke;
+        padding: 20px;
+        font-size: 28px;
+    }
+    #nav-bar ul #cross,#mobilebar{
+        display: block;
+}
+}

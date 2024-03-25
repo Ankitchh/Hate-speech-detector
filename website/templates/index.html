@@ -23,7 +23,7 @@
 
     <!-- stylesheet-->
     <link rel="stylesheet" href="../static/style.css">
-    <title>{%block tiltle%}home page {%endblock%}</title>
+    <title>Project</title>
 </head>
 <body>
     
@@ -40,7 +40,7 @@
                 <a href=""><i class="fa-brands fa-square-instagram"></i></a>
             </div>
         </div>
-       
+        
         </div>
         <!-- navbar -->
         <nav id="nav-bar" class="uni-padding">
@@ -50,8 +50,31 @@
                 <li><a class=""nav-iteam nav-link id="Blog" href="/blog">Blog</a></li>
                 <li><a class=""nav-iteam nav-link id="contact" href="/contactUs">Contact Us</a></li>
             </ul>
-        </nav> 
-        <h1>{%content%}</h1>
+        </nav>
+        <!-- poster -->
+        <div id="poster" class="uni-padding">
+            <h1> Detect Hate Speech</h1>
+            <!-- Link, audio & Videos Submition section -->
+            <div id="submit">
+            <h2>Link Submission</h2>
+            <form action="/result" method="post">
+                <label for="link">Enter Link:</label><br>
+                <input type="text" id="link" name="link"><br><br>
+                <input type="submit" value="Submit Link">
+            </form>
+        
+            <h2>File Upload</h2>
+            <form action="/result
+            " method="post" enctype="multipart/form-data">
+                <label for="audio">Upload Audio:</label><br>
+                <input type="file" id="audio" name="audio" accept="audio/*"><br><br>
+                <label for="video">Upload Video:</label><br>
+                <input type="file" id="video" name="video" accept="video/*"><br><br>
+                <input type="submit" value="Upload Files">
+            </form>
+        </div>
+        </div>
+        </header>
         <!-- footer -->
         <footer>
             <div id="imp-link" class="uni-padding">
@@ -68,7 +91,6 @@
                         <li><a class=""nav-iteam nav-link id="about" href="/about">About</a></li>
                         <li><a class=""nav-iteam nav-link id="Blog" href="/blog">Blog</a></li>
                         <li><a class=""nav-iteam nav-link id="contact" href="/contactUs">Contact Us</a></li>
-                    </ul>
                 </div>
                 <div class="imp">
                     <h3>Contact Us</h3>
