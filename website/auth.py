@@ -3,25 +3,18 @@ from flask import Blueprint
 
 auth = Blueprint("auth",__name__)
 
-
-@auth.route('/contactUs')
+@auth.route('/')
+def home():
+    return render_template("base.html") 
+@auth.route('/mission')
 def contact():
-    return render_template("base.html")
+    return render_template("mission.html")
 
 
-@auth.route('/services')
+@auth.route('/Team')
 def services():
-    return   render_template("base.html")
+    return   render_template("team.html")
 
-
-@auth.route('/blog')
-def blog():
-    return   render_template("blog.html")
-
-
-@auth.route('/about')
-def about():
-    return   render_template("about.html")
 
 @auth.route('/result')
 def result():

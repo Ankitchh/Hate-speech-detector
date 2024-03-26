@@ -1,315 +1,310 @@
 @font-face {
-    font-family: Oswald;
-        src: url(../fonts/Oswald-VariableFont_wght.ttf);
-    }
-    *{
-        font-family: 'Roboto', sans-serif;
-    }
-    h1,h2,h3,h4,h5{
-        font-family: Oswald;
-    }
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    font-family: Monsterrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Monsterrat;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    background-color: #C94E41;
+}
+#main #page1{
+    width: 100vw;
+    height: 100vh;
+    background-color: #C94E41;
+}
+#page1 #basicInfo{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+#page1 #basicInfo h2{
+    color: white;
+    font-size: 3vw;
+    font-weight: 900;
+}
+#page1 img{
+    width: 50px;
+    height: 50px;
+    margin-right: 100px;
+    margin-left: 50px;
+}
+#page1 nav .barmenu{
+    background: #ae5b52;
+    width: 100vw;
+    height: 10vh;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#page1 nav ul li h4{
+    font-size: 1.5vw;
+    font-weight: 500;
+   margin: 5px 40px;
+    text-decoration: none;
+    color: white;
+}
+#page1 nav ul li .home{
+    font-size: 1.5vw;
+    font-weight: 500;
+   margin: 5px 40px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.submenu{
+    list-style: none;
+    background: #C94E41;
+}
+.submenu li{
     
-    /* body*/
-    body{
-        margin: 0;
-    }
-    .uni-padding{
-        padding: 0 7%;
-    }
-    /* topbar */
-    #topbar{
-        background-color: #8e8e8e;
-        padding-top: 18px;
-        padding-bottom: 18px;
-        overflow: auto;
-    }
-    #tollfree{
-        float: left;
-        color: whitesmoke;
-        margin: 0;
-        margin-top: 7px;
-    }
-    #socialicon{
-        float: right;
-    }
-    .fa-brands{
-        background-color: whitesmoke;
-        color: rgb(142, 142, 142);
-        padding: 7px;
-        border-radius: 50%;
-    }
-    /* nav-bar */
-    #nav-bar{
-        background-color: #e54444;
-    }
-    #nav-bar ul li {
-        display: inline-block;
-        padding: 20px 0;
-        padding-right: 35px;
-    }
-    #nav-bar ul li a{
-        color: whitesmoke;
-        text-decoration: none;
-        font-size: 18px;
-    }
-    #nav-bar ul{
-        padding: 10px;
-        margin: 0;
-    }
-    /* poster */
-    #poster{
-        background-image: url(../image/cyberbully-featimg.png);
-        width: 100vw;
-        height: 80vh;
-        background-position: center;
-        background-size: cover;
-        color: black;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    #poster h1{
-        font-size: 50px;
-        position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    }
-   #submit{
+    display: inline-block;
+    position: relative;
+}
+.submenu li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    opacity: .7;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 400;
+}
+.submenu li {
+    display: block;
+}
+.submenu {
+    width: 6vw;
+    margin-right: 40px;
+    margin-left: 40px;
+    display: block;
+    background: #ae5b52;
     position: absolute;
+    z-index: 99999;
+   display: none;
+   
+}
+nav ul li:hover {
+    background: #762b22 ;
+}
+nav ul li:hover .submenu{
+    display: block;
+}
+
+
+
+
+#page1 #submission {
+   background-color: #C94E41;
+    width: 100vw;
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+}
+#page1 #submission p {
+    margin-top: 5vh;
+    font-size: 1.5vw;
+    width: 70vw;
+  text-align: center;
+  color: white;
+}
+#page1 #submission #submit{
+    width: 100vw;
+    margin-left: 20vw;
+    padding: 50px ;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+#page1 #submission #submit h2{
+    margin-bottom: 25px;
+    color: black;
+}
+#page1 #submission #submit input{
+    
+    background: #ae5b52;
+}
+
+
+
+
+
+#page1 #submission #submit #form2{
+    border: 3px solid white;
+    border-radius: 5%;
+    padding: 20px;
+    margin-right: 20vw;
+    display: inline-block;
+}
+#page1 #submission #submit #form2 .button{
+    padding: 10px;
+    border-radius: 20%;
+    background:#ae5b52;
+ }
+ #page1 #submission #submit #form2 .button:hover{
+    background:#762b22;
+ }
+ 
+#main #page2{
+    padding-right: 10vw;
+    padding-top: 150px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #C94E41;
+}
+#main #pageTeam{
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    background-color: #C94E41;
+}
+#team{
+    width: 100vw;
+    padding: 10vw;
+}
+
+#team h2{
+    font-size: 3vw;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+#team h4{
+    text-align: right;
+    font-size: 1.5vw;
+    margin-bottom: 5vh;
+}
+#team p{
+    font-size: 1vw;
+    margin-bottom: 5vh;
+}
+
+#blog{
+    position: relative;
+    width: 100%;
+    padding: 3vw 2vw;
+    border-top: 1px solid grey;
+}
+#blog a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 3.5vw;
+    font-weight: 600;
+    opacity: .6;
+}
+.blog3 {
+    border-bottom: 1px solid grey;
+}
+#blog img{
+    display: none;
+    width: 25vw;
+    height: 40vh;
+    position: absolute;
+    z-index: 99999999;
+}
+#main #page3{
+    width: 100vw;
+    height: 100vh;
+    background-color: #b33c2fbd;
+}
+#page3 .base{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 2px solid black;
+}
+#page3 .base img{
+   
+    width: 25%;
+    height: 25%;
+    border-radius: 60%;
+}
+#page3 .base .text{
+    font-size: 1.5vw;
+    margin-right: 20%;
+    color: wheat;
+    width: 30vw;
+}
+
+#page3 footer .barmenu{
+    padding: 40px 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-   }
-   #submit h2{
-    padding-right: 30px;
-   }
-   #submit form action{
-    border-radius: 15%;
-   }
-  
-    /* why us section */
-    #why-us{
-        overflow: auto;
-    }
-    .read-heading{
-        color:#e54444;
-        text-align: center;
-        font-size: 50px;
-    }
-    .sec33 h3{
-        color:#e54444;
-        font-size: 25px;
-        
-    }
-    .sec33 p{
-        color: #213521b7;
-        margin-bottom: 50px;
-        margin-left: 15px;
-    }
-    .sec33{
-        text-align: center;
-        width: 33.3%;
-        float: left;
-    }
-    /* contact us */
-    #contact{
-        background-color:#e54444 ;
-        color: whitesmoke;
-        overflow: auto;
-        padding-top: 30px ;
-        padding-bottom: 30px;
-    }
-    .sec70{
-        width: 70%;
-        float: left;
-    }
-    .sec30{
-        width: 30%;
-        float: left;
-        text-align: center;
-        padding-top: 50px;
-    }
-    #contactbtn{
-        background-color: whitesmoke;
-        color: #e54444;
-        text-decoration: none;
-       padding: 15px 50px;
-       border-radius: 8px;
-       font-size: 20px;
-       font-weight: bold;
+    color: white;
+    border-bottom: 2px solid black;
+}
+#page3 footer .barmenu h4{
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+#page3 footer .barmenu .submenu2 a{
+    color: wheat;
+    text-decoration: none;
+    font-size: 1.3vw;
+}
+#page3 footer .barmenu .home{
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+}
+footer #copyright{
+    margin-top: 25px;
+    text-align: center;
+}
 
-    }
-    /* blog */
-    #why-us{
-        padding-bottom: 50px;
-    }
-    #blog p{
-        margin: 0;
-        margin-bottom: 5px;
-    }
-    #readmore{
-        color:#e54444 ;
-        text-decoration: none;
-        font-family: Oswald;
-        font-weight: bold;
-    }
-    /* subscribe */
-    #subscribe{
-        background-color: #e54444;
-        color: whitesmoke;
-        overflow: auto;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }   
-    .sec50{
-        width: 50%;
-        float:left;
-    }
-    #submit{
-        padding-top: 30px;
-    }
-    #submit input[type="text"]{
-       padding: 10px;
-       font-size: 15px;
-       color: #e54444;
-       margin-right: 20px;
-       border: 0px;
-       width: 45%;
-    }
-    #submit input[type="submit"]{
-        
-        color: #e54444;
-        padding: 7px 15px;
-        font-size: 15px;
-        border: 0px;
-    }
-    #subscribe h2{
-        font-size: 30px;
-    }
-    /* footer */
-    #imp-link{
-        background-color: #515160;
-        color: whitesmoke;
-        overflow: auto;
-        padding:0;
-    }
-    #imp-link .imp p{
-        margin: 0;
-    }
-    .imp{
-        width:33.3%;
-        float: left;
-        padding: 25px 50px;
-        box-sizing: border-box;
-    }
-    .imp h3{
-        text-decoration: underline;
-        text-underline-offset: 10px;
-        text-decoration-thickness: 3px;
-    }
-    #footer-menu li a{
-        text-decoration: none;
-        color: whitesmoke;
-    }
-    #footer-menu{
-        list-style-type: none;
-        
-    }
-    #footer-menu li{
-        padding: 3px 0;
-    }
-    #copyright{
-        background-color: rgb(30, 30, 40);
-        padding: 15px;
-        color: #cbcbcb;
-    }
-    #copyright p{
-        margin: 0;
-        text-align: center;
-    }
-    #imp-id{
-        padding-left: 30px;
-    }
-    #nav-bar ul #cross,#mobilebar{
-        display: none;
-    }
-    /* responcive i-pad */
-    @media only screen and (max-width: 820px){
-        #nav-bar ul li {
-    padding-right: 21px;
-    }
-    .sec70{
-        padding-right: 30px;
-        box-sizing: border-box;
-    }
-    #blog img{
-       width: 200px;
-    }
-    
+
+
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    z-index: 1000;
 }
-/* responcive i-pad */
-@media only screen and (max-width: 500px){
-    #poster h1 {
-        font-size: 40px;
-    }
-    .sec70,.sec30,.sec33,.sec50,.imp{
-        width: 100%;
-    }
-    .sec70{
-            padding-right: 0;
-            text-align: center;
-    }
-    .sec33 a{
-        display: inline-block;
-        margin-bottom: 20px ;
-    }
-    #subscribe h2 {
-        text-align: center;
-        margin: 0;
-    }
-    .imp{
-        padding: 15px 25px;
-        text-align: center;
-    }
-    #footer-menu{
-        padding: 0;
-    }
-    /* mobile menu */
-    #nav-bar{
-        position: absolute;
-        top:0px;
-        height:100vh;
-        width: 250px;
-        padding: 0;
-        left: -250px;
-        transition: all 0.5s ease;
-    }
-    #nav-bar ul li{
-        display: block;
-        padding: 18px 0;
-        border-bottom: 1px solid rgb(199, 184, 184);
-        
-    }
-    #cross{
-        text-align: right;
-    }
-    .fa-regular{
-        font-size: 25px;
-    }
-    #mobilebar{
-        background-color: #e54444;
-        color: whitesmoke;
-        padding: 20px;
-        font-size: 28px;
-    }
-    #nav-bar ul #cross,#mobilebar{
-        display: block;
+
+.popup-content {
+    text-align: center;
 }
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
 }
