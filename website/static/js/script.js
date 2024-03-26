@@ -8,7 +8,7 @@ el: document.querySelector("#main"),
 smooth: true
 });
 }
-l  oco()
+loco()
 
 function page1aAni(){
   var tl = gsap.timeline();
