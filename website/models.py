@@ -1,75 +1,36 @@
 from flask import Flask, render_template, request, url_for, redirect, Blueprint
 import os
-import requests
+from io import BytesIO
+from elevenlabs.client import ElevenLabs
+from dotenv import load_dotenv
 
+load_dotenv()
+
+
+models = Blueprint("models", __name__)
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'mp3', 'wav', 'mp4', 'avi'}
 
-models = Blueprint("models", __name__)
 
-# Define your Whisper API endpoint
-WHISPER_API_ENDPOINT = "https://your-whisper-api-endpoint.com/transcribe"
+# elevenlabs = ElevenLabs(api_key=os.getenv("ELEVENLABS_API_KEY"))
 
-@models.route('/', methods=["GET", "POST"])
-def home():
-    if request.method == 'POST':
-        if 'audio' in request.files:
-            file = request.files['audio']
-            if file and allowed_file(file.filename):
-                filename = file.filename
-                file.save(os.path.join(UPLOAD_FOLDER, filename))
-                # Send the audio file to Whisper for transcription
-                transcription = transcribe_audio(os.path.join(UPLOAD_FOLDER, filename))
-                return redirect(url_for('models.result', transcription=transcription))
-            else:
-                return "Invalid file format for audio"
-        elif 'video' in request.files:
-            file = request.files['video']
-            if file and allowed_file(file.filename):
-                filename = file.filename
-                file.save(os.path.join(UPLOAD_FOLDER, filename))
-                # Send the video file to Whisper for transcription
-                transcription = transcribe_video(os.path.join(UPLOAD_FOLDER, filename))
-                return redirect(url_for('models.result', transcription=transcription))
-            else:
-                return "Invalid file format for video"
-    return render_template("base.html")
+# audio_path = "website/static/uploads/audio.mp3"
 
-@models.route('/result')
-def result():
-    transcription = request.args.get('transcription', '')
-    return render_template("result.html", transcription=transcription)
+# # Open the file directly instead of using requests.get()
+# with open(audio_path, 'rb') as audio_file:
+#     audio_data = BytesIO(audio_file.read())
 
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+# transcription = elevenlabs.speech_to_text.convert(
+#     file=audio_data,
+#     model_id="scribe_v1",  # Model to use, for now only "scribe_v1" is supported
+#     tag_audio_events=True,  # Tag audio events like laughter, applause, etc.
+#     language_code="eng",  # Language of the audio file. If set to None, the model will detect the language automatically.
+#     diarize=True,  # Whether to annotate who is speaking
+# )
 
-import requests
 
-def transcribe_audio(audio_file_path):
-    # Make a POST request to WHISPER_API_ENDPOINT with the audio file
-    files = {'audio_file': open(audio_file_path, 'rb')}
-    response = requests.post(WHISPER_API_ENDPOINT, files=files)
-    
-    # Check if the request was successful (status code 200)
-    if response.status_code == 200:
-        # Return the transcribed text from the response
-        return response.text
-    else:
-        # If the request was not successful, print an error message and return None
-        print("Error:", response.status_code, response.text)
-        return None
 
-def transcribe_video(video_file_path):
-    # Make a POST request to WHISPER_API_ENDPOINT with the video file
-    files = {'video_file': open(video_file_path, 'rb')}
-    response = requests.post(WHISPER_API_ENDPOINT, files=files)
-    
-    # Check if the request was successful (status code 200)
-    if response.status_code == 200:
-        # Return the transcribed text from the response
-        return response.text
-    else:
-        # If the request was not successful, print an error message and return None
-        print("Error:", response.status_code, response.text)
-        return None
+# # Join all words and spacings in correct order
+# clean_text = ''.join([word.text for word in transcription.words])
+# print(clean_text)
 
