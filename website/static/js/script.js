@@ -42,3 +42,16 @@ page1aAni();
 
 
 
+const target = document.getElementById("ai-output");
+const rawText = document.getElementById("transcription-data").textContent;
+let index = 0;
+
+function typeText() {
+  if (index < rawText.length) {
+    target.textContent += rawText.charAt(index);
+    index++;
+    setTimeout(typeText, 30); // Type speed
+  }
+}
+
+window.onload = typeText;

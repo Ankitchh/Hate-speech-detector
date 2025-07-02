@@ -17,52 +17,19 @@
 </head>
 <body>
     <div id="main">
-        <div id="page1">
-            <h1>Result Page</h1>
+        <div id="page">
+            <div class="result">
+                <h1>Analysis Result Shows</h1>
+                 <div class="result-text">
+                    <span id="transcription-data" style="display:none;">{{ transcription|safe }}</span>
+                    <h3 id="ai-output">
+                    </h3>
+                 </div>
+                 <button onclick="window.location.href='/'">OK</button>
         </div>
-        <div id="page2">
-            <div id="blog">
-                    <a href="https://www.un.org/en/hate-speech/understanding-hate-speech/what-is-hate-speech"  target="_blank">WHAT IS HATE SPEECH</a>
-            </div>
-            <div id="blog">
-                    <a href="https://www.nature.com/articles/s41598-023-31146-1#:~:text=H3.-,According%20to%20the%20empathic%20numbing%20hypothesis%2C%20exposure%20to%20hate%20speech,regardless%20of%20their%20group%20membership." target="_blank">How does hate speech affect the brain</a>
-            </div>
-            <div id="blog" class="blog3">
-                    <a href="https://www.unicef.org/parenting/how-talk-your-children-about-hate-speech#:~:text=This%20can%20impact%20their%20self,about%20self%2Dharm%20and%20suicide." target="_blank">How does hate speech affect children</a>
-            </div>
-        </div>
-        <div id="page3">
-               <div class="base"> 
-                <img src="../static/imageAndFonts/image/hate-speech.png" alt="">
-                <div class="text">
-                <h2>About Page</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, minus maxime? Recusandae molestias voluptatum laborum nesciunt dolores accusantium? Assumenda odio consequatur odit iste iure ullam, asperiores voluptates quasi placeat alias dignissimos a quis unde deleniti, aut accusamus labore architecto blanditiis, cumque in? Omnis, voluptate. Itaque praesentium aliquid sint ullam omnis.</p>
-            </div>
-            </div>
-            <footer>
-                <ul class="barmenu">
-                    <li>
-                        <h4>About Us</h4>
-                        <ul class="submenu2">
-                            <li><a href="/mission">Mission & Vision</a></li>
-                            <li><a href="/Team">Team</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Contact Us</h4>
-                        <ul class="submenu2">
-                            <li><a href="#" target="_blank">Email</a></li>
-                            <li><a href="#" target="_blank">Facebook</a></li>
-                            <li><a href="#" target="_blank">Twitter</a></li>
-                            <li><a href="#" target="_blank">Instagram</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div id="copyright">
-                    <p>Copyright &copy; Ankit Chhetri 2023-2024</p>
-                </div>
-            </footer>
-        </div>
+
+      
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
